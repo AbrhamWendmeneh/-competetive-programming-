@@ -9,12 +9,12 @@ class Solution:
         s.sort()
         init_1=0
         init_2=0
-        temp=0
+        
         while init_1< len(g) and init_2< len(s):
             if s[init_2]>=g[init_1]:
-                temp+=1
+                
                 init_1+=1
             init_2+=1
-        return temp
+        return init_1
         
         
