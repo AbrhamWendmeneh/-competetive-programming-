@@ -3,6 +3,8 @@ class Solution:
         # return min(nums)# but it is not relevant for this question
         left=0
         right=len(nums)-1
+        if nums[0]< nums[len(nums)-1]:
+            return nums[0]
         while left <= right:
             middle_term=(left+right)//2
             if nums[middle_term] < nums[right]:
