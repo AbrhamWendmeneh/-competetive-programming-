@@ -1,6 +1,6 @@
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
-        nums.sort()
+        # nums.sort()
         '''low=nums[0]
         high=[-1]
         while low <=mid:
@@ -10,7 +10,7 @@ class Solution:
         #     if j!=i:
         #         return i
         # return len(nums)
-        a=[]
+        # a=[]
         
         
         for i in range(min(nums),len(nums)+1):
@@ -18,6 +18,8 @@ class Solution:
                 return i
         
         return 0
+        
+        
         ''''
         for i in range(1,len(nums)+1):
             if nums[i]-nums[i-1]==1:
