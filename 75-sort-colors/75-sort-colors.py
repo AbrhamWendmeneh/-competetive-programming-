@@ -3,9 +3,39 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        for i in range(len(nums)):
-            for j in range(len(nums)-1):
-                if nums[j]> nums[j+1]:
-                    nums[j],nums[j+1]=nums[j+1], nums[j]
+        #using bubble sort method with n^2 time complexity
+        # for i in range(len(nums)-1,0,-1):
+        #     for j in range(i):
+        #         if nums[i]<nums[j]:
+        #             nums[j],nums[i]=nums[i],nums[j]
+        i=0
+        j=len(nums)-1
+        a=0
+        while a<=j:
+#             if nums[i]>nums[j]:
+#                 nums[j],nums[i]=nums[i],nums[j]
+#                 j-=1
+#             elif nums[i]< nums[j]:
+                
+#                 i+=1
+#             else:
+#                 j-=1
+            if nums[a]==0:
+                nums[a],nums[i]=nums[i],nums[a]
+                
+                a+=1
+                i+=1
+
+            elif nums[a]==2:
+                nums[a],nums[j]=nums[j],nums[a]
+                j-=1
+            else:
+                a+=1
+
+                
+                
+      
+                    
+                    
                     
         
