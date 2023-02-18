@@ -8,9 +8,8 @@ class Solution:
         #     for j in range(i):
         #         if nums[i]<nums[j]:
         #             nums[j],nums[i]=nums[i],nums[j]
-        i=0
-        j=len(nums)-1
-        a=0
+        i,a,j=0,0,len(nums)-1
+        
         while a<=j:
 #             if nums[i]>nums[j]:
 #                 nums[j],nums[i]=nums[i],nums[j]
