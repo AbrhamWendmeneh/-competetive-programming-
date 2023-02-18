@@ -8,7 +8,7 @@ class Solution:
             if arr[i]==0:
                 arr.insert(i+1,0)
                 i+=2
-                del arr[-1]
+                arr.pop()
             else:
                 i+=1
                 
