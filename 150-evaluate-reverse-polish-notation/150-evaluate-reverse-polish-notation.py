@@ -4,7 +4,7 @@ class Solution:
         
         for i in tokens:
             if i not in ['+', '*', '/','-']:
-                stack.append(i)
+                stack.append(int(i))
             
             else:
                 val_1=int(stack.pop())
@@ -23,4 +23,4 @@ class Solution:
                     
                     stack_vl=int(val_2/val_1)
                 stack.append(stack_vl)
-        return int(stack[0])
+        return (stack[0])
