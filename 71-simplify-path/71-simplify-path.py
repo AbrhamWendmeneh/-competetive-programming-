@@ -20,7 +20,7 @@ class Solution:
                 
         return stack'''
         
-        result=[]
+        '''result=[]
         val=''
         for i in path+'/':
             if i=='/':
@@ -34,6 +34,20 @@ class Solution:
             else:
                 val+=i
         
-        return '/'+'/'.join(result)
-                    
+        return '/'+'/'.join(result)'''
         
+        
+        result=[]
+        value_stack=path.split('/')
+        
+        for char in value_stack:
+            
+            if char=='..':
+                if result:
+                    result.pop()
+            elif not char or char=='.':
+                continue
+            else:
+                result.append(char)
+                
+        return '/'+ '/'.join(result)
