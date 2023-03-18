@@ -15,18 +15,20 @@ class Solution:
             
         low=0
         high=len(arr)-1
-        # target=max(arr)
+        target=max(arr)
         while low<high:
             mid=low+(high-low)//2
-            '''if arr[mid]==target:
+            
+            if arr[mid+1]<arr[mid] and arr[mid-1]<arr[mid]:
                 return mid
-            elif arr[mid]>target and mid<high:
-                high=mid-1
+            elif arr[mid+1]>arr[mid]:
+                low=mid+1
             else:
-                low=mid+1'''
+                high=mid-1
+            '''
             if arr[mid+1]>arr[mid]:
                 low=mid+1
             else:
-                high=mid
+                high=mid'''
         return low
                 
