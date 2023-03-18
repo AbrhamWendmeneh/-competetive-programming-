@@ -1,6 +1,6 @@
 class Solution:
     def peakIndexInMountainArray(self, arr: List[int]) -> int:
-        res=0
+        '''res=0
         right=1
         left=0
         while right<len(arr) and right>left:
@@ -11,5 +11,22 @@ class Solution:
                 right+=1
             else:
                 break
-        return res
+        return res'''
             
+        low=0
+        high=len(arr)-1
+        # target=max(arr)
+        while low<high:
+            mid=low+(high-low)//2
+            '''if arr[mid]==target:
+                return mid
+            elif arr[mid]>target and mid<high:
+                high=mid-1
+            else:
+                low=mid+1'''
+            if arr[mid+1]>arr[mid]:
+                low=mid+1
+            else:
+                high=mid
+        return low
+                
