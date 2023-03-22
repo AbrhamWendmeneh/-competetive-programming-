@@ -18,7 +18,7 @@ class Solution:
         
         if len(s1)>len(s2):
             return False
-        s1_count=Counter(s1)
+        s1_count=Counter(s1) 
         counter=Counter()
         for i,j in enumerate(s2):
             counter[j]+=1
