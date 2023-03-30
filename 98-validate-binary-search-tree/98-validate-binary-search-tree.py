@@ -11,7 +11,7 @@ class Solution:
             return True
         
         # val_left=self.isValidBST(root.left,prev)
-        print(prev,prev_2,root.val)
+        # print(prev,prev_2,root.val)
         
         
         if root.val < prev_2 and root.val>prev:
