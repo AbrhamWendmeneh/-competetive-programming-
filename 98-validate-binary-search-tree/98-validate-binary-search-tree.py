@@ -11,23 +11,26 @@ class Solution:
             return True
         
         # val_left=self.isValidBST(root.left,prev)
+        print(prev,prev_2,root.val)
         
-        if root.val <= prev_2 and root.val>=prev:
+        
+        if root.val < prev_2 and root.val>prev:
             
-            val_left=self.isValidBST(root.left,prev,root.val-1)
+            val_left=self.isValidBST(root.left,prev,root.val)
             
-            # print(val_left)
             
-            val_right=self.isValidBST(root.right,root.val+1,prev_2)
             
-            # print(val_right)
+            val_right=self.isValidBST(root.right,root.val,prev_2)
+            
+            
             
             return val_left and val_right
         
         return False
-            
-        # val_right=self.isValidBST(root.right) 
-        # return val_right and val_left
-        
+    '''
+        val_left=self.isValidBST(root.left,prev)   
+        val_right=self.isValidBST(root.right) 
+        return val_right and val_left'''
+    
         
         
