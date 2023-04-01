@@ -24,5 +24,6 @@ class Solution:
                 
                 low=mid+1
                 
-        return low if low==high and nums[low]==target else  -1
+        # return low if low==high and nums[low]==target else  -1
+        return -1
                 
