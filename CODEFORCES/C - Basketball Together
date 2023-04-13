@@ -1,0 +1,15 @@
+import math
+a,b=map(int,input().split())
+array=list(map(int,input().split()))
+array.sort()
+array=array[::-1]
+low=0
+high=0
+val=[]
+for i,j in enumerate(array):
+    val.append(math.ceil((b+1)/j))
+for i in val:
+    low+=i
+    if low<=a:
+        high+=1
+print(high)
