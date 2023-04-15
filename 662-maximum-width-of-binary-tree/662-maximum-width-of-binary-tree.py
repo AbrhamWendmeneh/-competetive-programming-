@@ -25,23 +25,16 @@ class Solution:
         #             queue.append(root.right)
         #         val-=1
         # return count_max
-        if not root:
-            return 0
+        if not root: return 0
+        q = [[root,1]]
+        maxWidth = 0
+        while q:
+            maxWidth = max(maxWidth,q[-1][1] - q[0][1] + 1)
+            for _ in range(len(q)):
+                curr,idx = q.pop(0)
+                if curr.left: q.append((curr.left,idx*2))
+                if curr.right: q.append((curr.right, idx*2+1))
+        return maxWidth
+        
 
-        queue = deque([(root, 0)])
-        max_width = 0
-
-        while queue:
-            level_size = len(queue)
-            _, level_begin = queue[0]
-
-            for _ in range(level_size):
-                node, position = queue.popleft()
-                if node.left:
-                    queue.append((node.left, 2*position))
-                if node.right:
-                    queue.append((node.right, 2*position+1))
-
-            max_width = max(max_width, position-level_begin+1)
-
-        return max_width
+        
