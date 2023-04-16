@@ -19,18 +19,15 @@ class Solution:
 #                 curr.pop()
 #         backtrack([],0)
 #         return ans
-            
+            set_val=set()
             for i in range(start,len(nums)):
-                
+                if nums[i] in set_val:
+                    continue
                 if not curr or nums[i]>=curr[-1]:
-                   
+                    set_val.add(nums[i])
                     backtrack(curr+[nums[i]],i+1)
         backtrack([],0)
-        final_val=[]
-        for j in ans:
-            if j not in final_val:
-                final_val.append(j)
-        return final_val
+        return ans
                 
                     
                 
