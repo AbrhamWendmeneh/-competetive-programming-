@@ -3,9 +3,21 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
+        # this code gives me time limit exceede for the last case 
+        # # nums[-k:]+nums[:k+1]
+        # temp=nums
+        # for i in range(k%(len(nums))):
+        #     val=temp.pop()
+        #     temp=[val]+temp
+        # nums[:]=temp
         
-        # [k:]+[0:k-1]
-        # nums[:]=nums[k+1:]+nums[0:k+1]
-        k=k%len(nums)
-        nums[:]=nums[-k:]+nums[0:-k]
+        
+        #modfied version is 
+        
+        k=k%(len(nums))
+        
+        nums[:]=nums[-k:]+nums[:-k]
+        
+            
+        
         
