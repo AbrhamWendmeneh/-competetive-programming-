@@ -1,13 +1,6 @@
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
-        
-        '''if len(nums)==1:
-            return [nums]
-        else:
-            val=[]
-            for i in range(len(nums)):
-                val_1=nums[i]
-                val_2=nums[]'''
+      
         res = []
 
         def backtrack(nums, path, res):
