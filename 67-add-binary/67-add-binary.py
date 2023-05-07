@@ -1,14 +1,9 @@
 class Solution:
     def addBinary(self, a: str, b: str) -> str:
-#         for i in a:
-#             if int(i)==0:
-                
-#         for j in b:
-#             if int(j)==0:
-        # return (bin(a)+bin(b))
-        a=(int(a,2))
-        b=(int(b,2))
-        c=bin(b+a)
-        return (c[2:])
+        
+        return bin(int(a,2) +int(b,2))[2:]
+    
+    #the reason which I use [2:] is to avoid the default value of 0b
+
                 
         
