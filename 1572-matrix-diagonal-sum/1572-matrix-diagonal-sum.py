@@ -1,28 +1,13 @@
 class Solution:
     def diagonalSum(self, mat: List[List[int]]) -> int:
-        a=0
-        # for i in range(len(mat)):
-        #     for j in range(len(mat)):
-        #         if i==j:
-        #             a+=(mat[i][j])
-        # b=mat[::-1]
-        # c=0
-        # for i in range(len(b)):
-        #     for j in range(len(b)):
-        #         if i==j:
-        #             c+=b[i][j]
-        # if len(mat[0])%2!=0:
-        #     return a+c-(mat[(len(mat)//2)][(len(mat)//2)])
-        # else:
-        #     return a+c
-        for i in range(len(mat)):
-            a+=mat[i][i]
-        b=0
-        mat_new=mat[::-1]
-        for i in range(len(mat)):
-            b+=mat_new[i][i]
-        if len(mat[0])%2!=0:
-            return a+b-(mat[(len(mat)//2)][(len(mat)//2)])
+        sum1=0
+        sum2=0
+        n=len(mat)
+        for i in range(n):
+            sum1+=mat[i][i]
+            sum2+=mat[i][n-1-i]
+        if n%2==0:
+            return sum1+sum2
         else:
-            return a+b
+            return sum1+sum2-mat[n//2][n//2]
         
