@@ -7,25 +7,37 @@
 class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
         
+        #dfs
+        
         if root is None:
             
             return False
         
-        else:
+        stack=[root]
+        val=[root.val]
+        
+        while stack:
             
-            if root.right is None and root.left is None and root.val==targetSum:
-                
-                return True
+            res=stack.pop()
+            innerval=val.pop()
+            print(innerval)
             
-            else:
+            if not res.left and not res.right:
+                if (innerval==targetSum):
+                    return True
                 
-                return self.hasPathSum(root.left,(targetSum-root.val)) or self.hasPathSum(root.right,(targetSum-root.val))
+    
+            if res.left:
                 
+                stack.append(res.left)
+                val.append(res.left.val+innerval)
                 
+            if res.right:
                 
-'''
-the following code is recursive type in which it tries to find the value of target sum is found in the tree given in the question and then it returns true if the required value is found in the tree otherwise it returns false in the final stage after evaluating all nodes that are found in the tree 
- the last else statement is used in this case that evalutes root.left val and targetval 
- 
- 
-'''
+                stack.append(res.right)
+                val.append(res.right.val+innerval)
+                
+        return False
+            
+        
+        
