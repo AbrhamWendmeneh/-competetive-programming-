@@ -1,49 +1,40 @@
 from collections import deque
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        '''
+        This is done by using the concept of dfs 
         
+        '''
         graph={}
-        degree=[0]*numCourses
-        
-        for i, j in prerequisites:
-            if j in graph:
-                graph[j].append(i)
-            else:
-                graph[j]=[i]
-            degree[i]+=1
-        
-        queue=deque()
-        
-        #in this place we have to find the value which has no prior course request
-        # to begin our queue
-        
-        for i in range(numCourses):
-            
-            if degree[i]==0:
-                queue.append(i)
-                
         visited=set()
+        in_degree=[0]*numCourses
         
-        
-        while queue:
-            
-            node= queue.popleft()
-            visited.add(node)
-            
-            if node in graph:
+        for val1 , val2 in prerequisites:
+            if val2 in graph:
+                graph[val2].append(val1)
+            else:
+                graph[val2]=[val1]
                 
-                for neigh in graph[node]:
-                    
-                    degree[neigh]-=1
-                    
-                    if degree[neigh]==0:
-                        
-                        queue.append(neigh)
+            in_degree[val1]+=1
+        stack=[]
+        for i in range(numCourses):
+            if in_degree[i]==0:
+                stack.append(i)
         
-        # this is to check if there is cycle or not and 
-        # if there is cycle the length of the set is not equal to 
-        # numCourses that we have in the input
         
-        return len(visited) == numCourses
+        while stack:
+            
+            node=stack.pop()
+            visited.add(node)
+            if node in graph:
+            
+                for res in graph[node]:
+                    in_degree[res]-=1
+
+                    if in_degree[res]==0:
+                        stack.append(res)
+        return len(visited)==numCourses
+            
+            
         
         
