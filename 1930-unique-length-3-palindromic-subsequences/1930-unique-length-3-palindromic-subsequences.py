@@ -1,8 +1,6 @@
 class Solution:
     def countPalindromicSubsequence(self, s: str) -> int:
         
-        if len(s)==3 and s[::-1]!=s:
-            return 0
 
         dict_val={}
         
