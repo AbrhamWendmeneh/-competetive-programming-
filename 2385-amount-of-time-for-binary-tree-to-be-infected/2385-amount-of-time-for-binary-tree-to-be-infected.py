@@ -51,13 +51,10 @@ class Solution:
                 helper(node.right)
                 
         helper(root)
-        print(len(graph))
         
         if len(graph) < 1:
             
             return 0
-        
-        print(graph)
         
         answer = 0
         queue =  deque([start])
@@ -80,53 +77,3 @@ class Solution:
             answer += 1
             
         return answer - 1
-    
-    
-'''
-        
-{1:[3,5] , 3:[10,6] , 5:[4], 4:[9,2]}
- {3:[10,6], 1:[3,5], 5:[4], 4:[9,2]}
- {
-  3:[1,10,6], 1 
-  10:[3], 2
-  6:[3], 2
-  1:[3,5],  2
-  5:[1,4], 3 
-  4:[9,2],  4
-  9:[4], 
-  2:[4]
-  }
-
-'''
-
-
-        
-        
-                        
-                
-            
-                        
-                
-                    
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
