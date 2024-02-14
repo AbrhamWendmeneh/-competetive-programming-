@@ -1,18 +1,29 @@
 class Solution:
     def rearrangeArray(self, nums: List[int]) -> List[int]:
-        a=[]
-        b=[]
-        c=0
-        d=0
+        
+        field_one = []
+        
+        field_two = []
+        
         for i in nums:
-            if i>0:
-                a.append(i)
+            
+            if i > 0:
+                
+                field_one.append(i)
+                
             else:
-                b.append(i)
-        ans=[]
+                
+                field_two.append(i)
+                
+        result = []
+        
         for i in range(len(nums)//2):
             
-            ans.append(a[i])
-            ans.append(b[i])
-        return ans
+            result.append(field_one[i])
+            
+            result.append(field_two[i])
+            
+        return result
+                
+                
         
