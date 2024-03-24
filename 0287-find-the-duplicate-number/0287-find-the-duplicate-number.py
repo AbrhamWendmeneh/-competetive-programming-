@@ -12,10 +12,3 @@ class Solution:
             else:
                 
                 set_val.add(i)
-        
-            
-                
-                
-       
-        
-        
