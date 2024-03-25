@@ -1,15 +1,15 @@
 class Solution:
     def largestAltitude(self, gain: List[int]) -> int:
         
-        firstval=0
-        tempval=firstval
+        height = 0
+        
+        temp = 0 
         
         for i in gain:
             
-            firstval+=i
-            tempval=max(firstval,tempval)
+            temp += i
             
-        return tempval
+            height = max(height, temp)
             
+        return height
         
-            
