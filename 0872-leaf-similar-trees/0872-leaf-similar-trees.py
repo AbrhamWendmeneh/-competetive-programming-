@@ -7,43 +7,39 @@
 class Solution:
     def leafSimilar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> bool:
         
+        
+        
         if not root1 or not root2:
             
-            return 
+            return
         
-        def helper(root):
+        def dfs(root):
             
             result = []
-            
+        
             stack = [root]
-            
+        
             while stack:
+
+                currentVal = stack.pop()
+
+                if currentVal.right is None and currentVal.left is None:
+                    result.append(currentVal.val)
+
+                if currentVal.right:
+                    stack.append(currentVal.right)
+
+                if currentVal.left:
+                    stack.append(currentVal.left)
                 
-                node = stack.pop()
-                
-                if node.right is None and node.left is None:
-                    
-                    result.append(node.val)
-                    
-                if node.left:
-                    
-                    stack.append(node.left)
-                    
-                if node.right:
-                    
-                    stack.append(node.right)
-         
             return result
         
-                    
-        val1 = helper(root1)
+        tree1 = dfs(root1)
         
-        val2 = helper(root2)
+        tree2 = dfs(root2)
         
-        return val1 == val2
-                    
-                
-                
+        return tree1 == tree2
         
-
+        
+        
         
