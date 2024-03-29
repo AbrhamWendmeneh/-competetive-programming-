@@ -8,33 +8,36 @@ from collections import deque
 class Solution:
     def maxLevelSum(self, root: Optional[TreeNode]) -> int:
         
-        if not root:
-            return 0
+        queue = deque()
         
-        queue=deque()
         queue.append(root)
-        result=[]
+        
+        result = []
         
         while queue:
             
-            level=[]
-            size=len(queue)
+            level = 0
             
-            for _ in range(size):
+            for _ in range(len(queue)):
                 
-                curr_node=queue.popleft()
-                level.append(curr_node.val)
+                curr_node = queue.popleft()
+                
+                level += curr_node.val
                 
                 if curr_node.left:
+                    
                     queue.append(curr_node.left)
                     
                 if curr_node.right:
+                    
                     queue.append(curr_node.right)
                     
-            result.append(sum(level))
+            result.append(level)
             
-        return result.index(max(result))+1
-        
-        
+        return result.index(max(result)) + 1
+            
+            
+            
+            
         
         
