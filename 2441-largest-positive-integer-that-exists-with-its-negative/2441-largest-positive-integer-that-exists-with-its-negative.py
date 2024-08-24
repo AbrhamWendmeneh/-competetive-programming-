@@ -1,10 +1,23 @@
 class Solution:
     def findMaxK(self, nums: List[int]) -> int:
-        a=[]
-        for i in nums:
-            if -i in nums and i >0:
-                a.append(i)
-        if a==[]:
-            return -1
-        return max(a)
+
+        nums = sorted(nums)
+
+        left, right = 0, len(nums) - 1
+
+        while left < right:
+            
+            if nums[left] + nums[right] == 0:
+
+                return nums[right]
+            
+            if nums[left] + nums[right] < 0 :
+
+                left += 1
+                
+            else:
+
+                right -= 1
+
+        return -1
                 
