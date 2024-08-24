@@ -11,7 +11,7 @@ class Solution:
 
                 return nums[right]
             
-            if nums[left] + nums[right] < 0 :
+            elif nums[left] + nums[right] < 0 :
 
                 left += 1
                 
