@@ -8,6 +8,7 @@ A collection of LeetCode questions to ace the coding interviews! - Created using
 ## Two Pointers
 |  |
 | ------- |
+| [0088-merge-sorted-array](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0088-merge-sorted-array) |
 | [0768-partition-labels](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0768-partition-labels) |
 ## String
 |  |
@@ -17,4 +18,12 @@ A collection of LeetCode questions to ace the coding interviews! - Created using
 |  |
 | ------- |
 | [0768-partition-labels](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0768-partition-labels) |
+## Array
+|  |
+| ------- |
+| [0088-merge-sorted-array](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0088-merge-sorted-array) |
+## Sorting
+|  |
+| ------- |
+| [0088-merge-sorted-array](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0088-merge-sorted-array) |
 <!---LeetCode Topics End-->
