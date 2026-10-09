@@ -10,6 +10,7 @@ A collection of LeetCode questions to ace the coding interviews! - Created using
 | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0088-merge-sorted-array](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0088-merge-sorted-array) |
+| [0189-rotate-array](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0189-rotate-array) |
 | [0768-partition-labels](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0768-partition-labels) |
 ## String
 |  |
@@ -24,8 +25,13 @@ A collection of LeetCode questions to ace the coding interviews! - Created using
 | ------- |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0088-merge-sorted-array](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0088-merge-sorted-array) |
+| [0189-rotate-array](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0189-rotate-array) |
 ## Sorting
 |  |
 | ------- |
 | [0088-merge-sorted-array](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0088-merge-sorted-array) |
+## Math
+|  |
+| ------- |
+| [0189-rotate-array](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0189-rotate-array) |
 <!---LeetCode Topics End-->
