@@ -26,6 +26,7 @@ A collection of LeetCode questions to ace the coding interviews! - Created using
 | [0026-remove-duplicates-from-sorted-array](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0088-merge-sorted-array](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0088-merge-sorted-array) |
 | [0189-rotate-array](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0189-rotate-array) |
+| [0643-maximum-average-subarray-i](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0643-maximum-average-subarray-i) |
 ## Sorting
 |  |
 | ------- |
@@ -34,4 +35,8 @@ A collection of LeetCode questions to ace the coding interviews! - Created using
 |  |
 | ------- |
 | [0189-rotate-array](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0189-rotate-array) |
+## Sliding Window
+|  |
+| ------- |
+| [0643-maximum-average-subarray-i](https://github.com/AbrhamWendmeneh/-competetive-programming-/tree/master/0643-maximum-average-subarray-i) |
 <!---LeetCode Topics End-->
